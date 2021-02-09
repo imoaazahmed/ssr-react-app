@@ -1,5 +1,4 @@
 # SSR React Application
----
 
 ### Installation
 
