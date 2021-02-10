@@ -4,6 +4,9 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
+	// Mode
+	mode: process.env.NODE_ENV === "development" ? "development" : "production",
+
 	// Entry files
 	entry: path.resolve(__dirname, "src/index.js"),
 
@@ -95,9 +98,10 @@ module.exports = {
 
 	// Dev server configuration
 	devServer: {
+		hot: true,
 		open: true,
 		port: 3000,
-		compress: true,
+		compress: false,
 		historyApiFallback: true,
 	},
 
