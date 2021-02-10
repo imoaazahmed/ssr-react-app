@@ -8,4 +8,4 @@ require("@babel/register")({
 });
 
 // Call server configuration
-require("./server");
+require("./app");

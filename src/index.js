@@ -1,6 +1,9 @@
 import "@babel/polyfill";
-import React, { StrictMode } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
+import { BrowserRouter } from "react-router-dom";
+
+// Components
 import App from "./App";
 
 // CSS
@@ -10,8 +13,8 @@ import "./styles/masterstyle.css";
 console.log("working!");
 
 ReactDOM.hydrate(
-	<StrictMode>
+	<BrowserRouter>
 		<App />
-	</StrictMode>,
+	</BrowserRouter>,
 	document.getElementById("root")
 );
